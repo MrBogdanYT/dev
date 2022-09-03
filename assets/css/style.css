@@ -1,0 +1,175 @@
+:root {
+    --main-color: #0a192f;
+    --clickable-color: #64ffda;
+    --accent-color: #ccd6f6;
+    --text-color: #9094ac;
+    --line-color: #a8b2d1;
+    --calibre: "Calibre";
+    --sf-mono: "SF Mono Regular";
+    --s1: 80px;
+    --s2: 60px;
+    --s3: 40px;
+    --s4: 20px;
+    --s-button: 18px;
+}
+* {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-family: var(--calibre);
+    margin: 0;
+}
+.main-view {
+    margin: 30vh 18vw;
+}
+.main-view .presentation {
+    font-size: var(--s4);
+    color: var(--clickable-color);
+    font-family: var(--sf-mono);
+}
+.main-view .name {
+    font-size: var(--s1);
+    color: var(--accent-color);
+    font-weight: bold;
+}
+.main-view .sub-name {
+    font-size: var(--s2);
+    color: var(--text-color);
+    font-weight: bold;
+}
+.description {
+    font-size: var(--s4);
+    color: var(--text-color);
+    width: 50vw;
+}
+.continue span {
+    top: 2px;
+}
+.continue {
+    font-size: var(--s-button);
+    margin-top: 100px !important;
+    padding: 17px 0px;
+    border-radius: 100px;
+    border: 2px solid var(--line-color);
+    margin: auto;
+    max-width: 250px;
+    text-align: center;
+}
+.sidebar-left {
+    z-index: 1;
+    overflow-x: hidden;
+    position: fixed;
+    bottom: 100px;
+    left: 20px;
+    color: var(--line-color);
+}
+.sidebar-left a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    color: var(--line-color) !important;
+}
+.sidebar-right {
+    z-index: 1;
+    overflow-x: hidden;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    color: var(--line-color);
+}
+.sidebar-right a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    color: var(--line-color) !important;
+}
+.sidebar-right p {
+    font-size: 15px;
+    font-family: var(--sf-mono);
+    padding-top: 0px;
+    padding-right: 17px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    writing-mode: vertical-rl;
+}
+.sidebar-left .v-line {
+    border-left: 2px solid var(--line-color);
+    position: fixed;
+    left: 46px;
+    height: 100px;
+}
+.sidebar-right .v-line {
+    border-left: 2px solid var(--line-color);
+    position: fixed;
+    right: 46px;
+    height: 100px;
+}
+@media screen and (max-width: 800px) {
+    .sidebar-left {
+        visibility: hidden;
+   }
+}
+.top-bar li {
+    display: inline;
+    text-align: center;
+}
+.top-bar li a{
+    width: 100px;
+}
+.one:hover ~ hr {
+    margin-left: 0% !important;
+}
+.two:hover ~ hr {
+    margin-left: 25% !important;
+}
+.three:hover ~ hr {
+    margin-left: 50% !important;
+}
+.four:hover ~ hr {
+    margin-left: 75% !important;
+}
+hr {
+    background: var(--clickable-color);
+    height: 3px;
+    width: 25%;
+    margin: 0;
+    border: none;
+    transition: .3s ease-in-out;
+}
+.top-bar {
+    float: right;
+    position: relative;
+    top: -270px;
+    right: 100px;
+}
+.top-bar a {
+    display: inline-block;
+    width: 25%;
+    padding: 5px 0;
+    text-decoration: none;
+    color: var(--accent-color)
+}
+
+.container{
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #495670;
+    border: 3px solid #0a192f;
+    border-radius: 10px;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    padding: 40px;
+    width: 70px;
+    border-radius: 50%
+}
+
