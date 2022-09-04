@@ -6,10 +6,13 @@
     --line-color: #a8b2d1;
     --calibre: "Calibre";
     --sf-mono: "SF Mono Regular";
-    --s1: 80px;
-    --s2: 60px;
-    --s3: 40px;
-    --s4: 20px;
+    --s8: 80px;
+    --s6: 60px;
+    --s4: 40px;
+    --s3: 30px;
+    --s2: 20px;
+    --s1: 10px;
+    --s-skills: 15px;
     --s-button: 18px;
     --pop-animation: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -26,25 +29,25 @@
 }
 
 .main-view .presentation {
-    font-size: var(--s4);
+    font-size: var(--s2);
     color: var(--clickable-color);
     font-family: var(--sf-mono);
 }
 
 .main-view .name {
-    font-size: var(--s1);
+    font-size: var(--s8);
     color: var(--accent-color);
     font-weight: bold;
 }
 
 .main-view .sub-name {
-    font-size: var(--s2);
+    font-size: var(--s6);
     color: var(--text-color);
     font-weight: bold;
 }
 
 .description {
-    font-size: var(--s4);
+    font-size: var(--s2);
     color: var(--text-color);
     width: 50vw;
 }
@@ -118,6 +121,9 @@
 
 @media screen and (max-width: 800px) {
     .sidebar-left {
+        visibility: hidden;
+    }
+    .sidebar-right {
         visibility: hidden;
     }
 }
@@ -207,4 +213,86 @@ hr {
     color: var(--clickable-color) !important;
     margin-bottom: 6px !important;
     transition: var(--pop-animation);
+}
+
+.about-me {
+    margin-top: 30vh;
+    margin-bottom: 30vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    font-size: var(--s2);
+}
+
+.about-me .number {
+    color: var(--clickable-color);
+    font-size: var(--s3);
+    font-family: 'Inconsolata';
+    font-variant-numeric: slashed-zero;
+}
+
+.about-me .text {
+    color: var(--accent-color);
+    font-size: var(--s4);
+    font-variant-numeric: slashed-zero;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: 0px 10px;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    overflow: hidden;
+    list-style: none;
+}
+
+.skills-list li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-family: var(--sf-mono);
+    font-size: var(--s-skills);
+}
+
+.skills-list li a {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-family: var(--sf-mono);
+    font-size: var(--s-skills);
+    padding: 0;
+    color: var(--clickable-color);
+}
+
+.skills-list li::before {
+    content: "▸";
+    position: absolute;
+    top: 6px;
+    left: 0px;
+    color: var(--clickable-color);
+    line-height: 12px;
+}
+
+.link {
+    text-decoration: none;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.link:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: var(--clickable-color);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.link:hover:after {
+    width: 100%;
+    left: 0;
 }
