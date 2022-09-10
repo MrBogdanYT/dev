@@ -4,6 +4,8 @@
     --accent-color: #ccd6f6;
     --text-color: #9094ac;
     --line-color: #a8b2d1;
+    --low-color: #8892b0;
+    --light-backgtound: #112240;
     --calibre: "Calibre";
     --sf-mono: "SF Mono Regular";
     --s8: 80px;
@@ -104,14 +106,14 @@
     text-decoration: none;
 }
 
-.sidebar-left .v-line {
+.sidebar-left vline {
     border-left: 2px solid var(--line-color);
     position: fixed;
     left: 46px;
     height: 100px;
 }
 
-.sidebar-right .v-line {
+.sidebar-right vline {
     border-left: 2px solid var(--line-color);
     position: fixed;
     right: 46px;
@@ -123,6 +125,7 @@
     .sidebar-left {
         visibility: hidden;
     }
+
     .sidebar-right {
         visibility: hidden;
     }
@@ -137,23 +140,23 @@
     width: 100px;
 }
 
-.one:hover~hr {
+.top-bar .one:hover~hr {
     margin-left: 0% !important;
 }
 
-.two:hover~hr {
+.top-bar .two:hover~hr {
     margin-left: 25% !important;
 }
 
-.three:hover~hr {
+.top-bar .three:hover~hr {
     margin-left: 50% !important;
 }
 
-.four:hover~hr {
+.top-bar .four:hover~hr {
     margin-left: 75% !important;
 }
 
-hr {
+.top-bar hr {
     background: var(--clickable-color);
     height: 3px;
     width: 25%;
@@ -295,4 +298,196 @@ hr {
 .link:hover:after {
     width: 100%;
     left: 0;
+}
+
+.experience {
+    margin-top: 30vh;
+    margin-bottom: 30vh;
+    margin-left: 6.5vw;
+    margin-right: 10vw;
+    width: 50vw;
+    font-size: var(--s2);
+    padding-top: 100px;
+}
+
+.experience .number {
+    color: var(--clickable-color);
+    font-size: var(--s3);
+    font-family: 'Inconsolata';
+    font-variant-numeric: slashed-zero;
+}
+
+.experience .text {
+    color: var(--accent-color);
+    font-size: var(--s4);
+    font-variant-numeric: slashed-zero;
+}
+
+.tablist li {
+    display: list-item;
+    list-style-type: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tablist ul {
+    padding: 0;
+}
+
+.experience-bar-handle {
+    background: var(--clickable-color);
+    height: 40px;
+    width: 4px;
+    margin: 0;
+    border: none;
+    transition: .3s ease-in-out;
+    position: relative;
+    left: -2px;
+}
+
+.experience-bar {
+    background: var(--text-color);
+    width: 1px;
+    border: none;
+    position: relative;
+}
+
+.tablist {
+    min-width: 180px;
+    font-size: 13px;
+    padding-right: 20px;
+}
+
+.hline {
+    width: 250px;
+    height: 1px;
+    background-color: var(--text-color);
+    display: block;
+    content: "";
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.experience .content {
+    display: flex;
+}
+
+.experience .title {
+    display: block;
+}
+
+.about-me .title {
+    display: flex;
+}
+
+.experience-select-active {
+    color: var(--clickable-color);
+    background-color: var(--light-backgtound);
+}
+
+.experience-select-active-parent {
+    background-color: var(--light-backgtound);
+}
+
+.tablist span {
+    font-family: var(--sf-mono);
+}
+
+.experience .entry .title .position {
+    font-size: 25px;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.experience .entry .title .duration {
+    font-family: var(--sf-mono);
+    font-size: 15px;
+}
+
+.experience .entry .position-atributes {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+.experience .entry .position-atributes li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.experience .entry .position-atributes li::before {
+    content: "▸";
+    top: 6px;
+    left: 0px;
+    color: var(--clickable-color);
+    line-height: 12px;
+}
+
+.experience .projects {
+    padding-top: 50px;
+}
+
+.experience .projects ul {
+    list-style: none;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    position: relative;
+}
+
+.experience .projects li {
+    margin-bottom: 70px;
+}
+
+.experience .projects .project-inner {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    height: 100%;
+    padding: 2rem 1.75rem;
+    border-radius: 4px;
+    background-color: var(--light-backgtound);
+    overflow: auto;
+}
+
+.experience .projects .project-inner * {
+    background-color: var(--light-backgtound);
+}
+
+.experience .projects .project-inner .description {
+    font-size: 17px;
+    width: auto;
+}
+
+.experience .projects .project-inner .title {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.experience .projects .project-inner .tech * {
+    font-size: 12px;
+    font-family: var(--sf-mono);
+    display: flex;
+    margin: 0;
+    color: var(--low-color);
+}
+
+.experience .projects .project-inner .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experience .projects .project-inner .header .big {
+    font-size: 40px;
+    color: var(--clickable-color);
 }
