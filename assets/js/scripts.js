@@ -24,10 +24,10 @@ function registerExperienceButtons(amount) {
         let experineceClass = "experience-" + number;
 
         let button = document.getElementsByClassName(buttonClass)[0];
-        let experience = document.getElementsByClassName(experineceClass)[0];
+        let experience = document.getElementsByClassName(experineceClass);
 
         button.parentNode.addEventListener("click", () => {
-            let active = document.getElementsByClassName("experience-active")[0];
+            let active = document.getElementsByClassName("experience-active");
             let activeSelect = document.getElementsByClassName("experience-select-active")[0];
             let activeSelectParent = document.getElementsByClassName("experience-select-active-parent")[0];
             let bar = document.getElementsByClassName("experience-bar-handle")[0];
@@ -39,12 +39,20 @@ function registerExperienceButtons(amount) {
             button.parentNode.classList.add("experience-select-active-parent");
 
             if (active != undefined) {
-                active.hidden = true;
-                active.classList.remove("experience-active");
+                const list = [...active];
+                for (let index = 0; index < list.length; index++) {
+                    const element = list[index];
+                    element.hidden = true;
+                    element.classList.remove("experience-active");
+                }
             }
             if (experience != undefined) {
-                experience.hidden = false;
-                experience.classList.add("experience-active");
+                const list = [...experience];
+                for (let index = 0; index < list.length; index++) {
+                    const element = list[index];
+                    element.hidden = false;
+                    element.classList.add("experience-active");
+                }
             }
         });
     }

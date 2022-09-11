@@ -480,6 +480,17 @@
     color: var(--low-color);
 }
 
+.experience .projects .project-inner .tech ul {
+    display: flex;
+    align-items: flex-end;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    list-style: none;
+}
+
 .experience .projects .project-inner .header {
     width: 100%;
     display: flex;
