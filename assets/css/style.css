@@ -470,6 +470,8 @@
     font-size: 22px;
     font-weight: bold;
     color: var(--accent-color);
+    padding-top:20px;
+    padding-bottom:20px;
 }
 
 .experience .projects .project-inner .tech * {
