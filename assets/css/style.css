@@ -374,11 +374,15 @@
 }
 
 .experience .title {
-    display: block;
+    display: flex;
 }
 
 .about-me .title {
     display: flex;
+}
+
+.experience .content .title {
+    display: block;
 }
 
 .experience-select-active {
