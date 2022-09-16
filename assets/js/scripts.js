@@ -10,7 +10,7 @@ function getElements(_class){
 }
 
 function registerExperienceButtons(amount) {
-    let size = getHeight("tablist");
+    let size = 38.5;
 
     for (let i = 1; i <= amount; i++) {
         let buttonClass = "experience-select-" + i;
@@ -25,7 +25,7 @@ function registerExperienceButtons(amount) {
             let activeSelectParent = getElement("experience-select-active-parent");
             let bar = getElement("experience-bar-handle");
 
-            bar.style.top = size / amount * (i - 1) + "px";
+            bar.style.top = size * (i - 1) + "px";
             activeSelect.classList.remove("experience-select-active");
             activeSelectParent.classList.remove("experience-select-active-parent");
             button.classList.add("experience-select-active");
