@@ -1,22 +1,29 @@
 registerExperienceButtons(8);
 registerExperienceHover(8);
 
+function getElement(_class){
+    return document.getElementsByClassName(_class)[0];
+}
+
+function getElements(_class){
+    return document.getElementsByClassName(_class);
+}
+
 function registerExperienceButtons(amount) {
     let size = getHeight("tablist");
 
     for (let i = 1; i <= amount; i++) {
-        let number = intToString(i);
-        let buttonClass = "experience-select-" + number;
-        let experineceClass = "experience-" + number;
+        let buttonClass = "experience-select-" + i;
+        let experineceClass = "experience-" + i;
 
-        let button = document.getElementsByClassName(buttonClass)[0];
-        let experience = document.getElementsByClassName(experineceClass);
+        let button = getElement(buttonClass);
+        let experience = getElements(experineceClass);
 
         button.parentNode.addEventListener("click", () => {
-            let active = document.getElementsByClassName("experience-active");
-            let activeSelect = document.getElementsByClassName("experience-select-active")[0];
-            let activeSelectParent = document.getElementsByClassName("experience-select-active-parent")[0];
-            let bar = document.getElementsByClassName("experience-bar-handle")[0];
+            let active = getElements("experience-active");
+            let activeSelect = getElement("experience-select-active");
+            let activeSelectParent = getElement("experience-select-active-parent");
+            let bar = getElement("experience-bar-handle");
 
             bar.style.top = size / amount * (i - 1) + "px";
             activeSelect.classList.remove("experience-select-active");
@@ -44,40 +51,27 @@ function registerExperienceButtons(amount) {
     }
 }
 
-function intToString(int){
-    return "" + int;
-}
-
-function getHeight(element){
-    return document.getElementsByClassName(element)[0].clientHeight
-}
-
 function registerExperienceHover(amount) {
     let size = 38.5;
     
-    document.getElementsByClassName("experience-bar")[0].style.height = size * amount + "px";
+    getElement("experience-bar").style.height = size * amount + "px";
 
     for (let i = 1; i <= amount; i++) {
-        let number = intToString(i);
-        let buttonClass = "experience-select-" + number;
+        let buttonClass = "experience-select-" + i;
 
-        let button = document.getElementsByClassName(buttonClass)[0];
-        let bar = document.getElementsByClassName("experience-bar-handle")[0];
+        let button = getElement(buttonClass);
+        let bar = getElement("experience-bar-handle");
 
         button.parentNode.addEventListener("mouseover", () => {
             bar.style.top = size * (i - 1) + "px";
         });
         button.parentNode.addEventListener("mouseout", () => {
-            let active = document.getElementsByClassName("experience-select-active")[0];
+            let active = getElement("experience-select-active");
             let activeClass = active.classList[0];
             let numberString = activeClass.replace("experience-select-", "");
-            let number = stringToInt(numberString);
+            let number = parseInt(numberString);
 
             bar.style.top = size * (number - 1) + "px";
         });
     }
-}
-
-function stringToInt(string) {
-    return parseInt(string);
 }
