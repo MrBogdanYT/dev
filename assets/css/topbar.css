@@ -34,9 +34,9 @@
 
 .top-bar {
     float: right;
-    position: relative;
-    top: -270px;
-    right: 100px;
+    position: absolute;
+    top: 30px;
+    right: 120px;
 }
 
 .top-bar a {

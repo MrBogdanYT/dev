@@ -4,20 +4,30 @@
     --card-height: 200px;
 }
 
-.section .grid .title{
+.section .title{
     font-size: 80px;
     font-weight: 500;
     color: var(--accent-color);
-    text-align: center;
     margin-bottom: 50px;
+    text-align: center;
+}
+
+.section .title:after {
+    content: "";
+    width: 45px;
+    height: 6px;
+    background: var(--clickable-color);;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 45px;
 }
 
 .section .grid{
+    justify-content: center;
     display: grid;
     width: 100%;
     grid-template-columns: repeat(auto-fill, var(--crad-width));
-    row-gap: 20px;
-    column-gap: 20px;
+    gap: 20px;
 }
 
 .section .card{
@@ -26,6 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 .section .card .image{
@@ -54,9 +65,13 @@
 .section .card .name{
     background-color: transparent;
     border-radius: 25px;
-    font-size: 40px;
+    font-size: 33px;
     border-radius: 25px;
     z-index: 10;
     text-align: center;
+}
+
+.section {
+    padding-bottom: 200px;
 }
 

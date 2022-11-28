@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/topbar.css">
     <link rel="stylesheet" href="/assets/css/degrees.css">
+    <link rel="stylesheet" href="/assets/css/popup.css">
 
     <link rel="stylesheet" href="/assets/font/calibre/style.css">
     <link rel="stylesheet" href="/assets/font/sf-mono/style.css">
@@ -61,75 +62,97 @@
         <vline />
     </div>
 
-    <div class="main-view">
-        <div class="section">
-            <div class="grid">
-                <div class="title"></div>
-                <div class="title">Bachelors</div>
-                <div class="title"></div>
-
-                <div class="card">
-                    <div class="blur"></div>
-                    <div class="image">
-                        <img src="/assets/images/MicroBachelors.png">
-                    </div>
-                    <div class="name">Programing & Data Structures</div>
-                </div>
-                <div class="card">
-                    <div class="blur"></div>
-                    <div class="image">
-                        <img src="/assets/images/MicroBachelors.png">
-                    </div>
-                    <div class="name">Programing & Data Structures</div>
-                </div>
-                <div class="card">
-                    <div class="blur"></div>
-                    <div class="image">
-                        <img src="/assets/images/MicroBachelors.png">
-                    </div>
-                    <div class="name">Programing & Data Structures</div>
-                </div>
-                <div class="card">
-                    <div class="blur"></div>
-                    <div class="image">
-                        <img src="/assets/images/MicroBachelors.png">
-                    </div>
-                    <div class="name">Programing & Data Structures</div>
-                </div>
-                <div class="card">
-                    <div class="blur"></div>
-                    <div class="image">
-                        <img src="/assets/images/MicroBachelors.png">
-                    </div>
-                    <div class="name">Programing & Data Structures</div>
-                </div>
-                <div class="card">
-                    <div class="blur"></div>
-                    <div class="image">
-                        <img src="/assets/images/MicroBachelors.png">
-                    </div>
-                    <div class="name">Programing & Data Structures</div>
-                </div>
-                <div class="card">
-                    <div class="blur"></div>
-                    <div class="image">
-                        <img src="/assets/images/MicroBachelors.png">
-                    </div>
-                    <div class="name">Programing & Data Structures</div>
-                </div>
-                <div class="card">
-                    <div class="blur"></div>
-                    <div class="image">
-                        <img src="/assets/images/MicroBachelors.png">
-                    </div>
-                    <div class="name">Programing & Data Structures</div>
+    <div class="popup" id="popup" hidden>
+        <div class="content-view">
+            <a href="#" class="close">x</a> 
+            <div class="container">
+                <div class="title">Some Bad Ass Degree</div>
+                <div class="degree"><img src="/assets/images/MicroBachelors.png"></div>
+                <div class="details">
+                    <p>Platform: <a target="_blank" href="#" class="link">ABC University</a></p>
+                    <p>Degree ID: <a target="_blank" href="#" class="link">69-420</a></p>
+                    <p>Issue Date: 2024 lol</p>
                 </div>
             </div>
+        </div>
+    </div>
+
+
+    <div class="main-view">
+
+
+        <div class="section">
+            <div class="title">Bachelors</div>
+            
+            <div class="grid">
+                <div class="card"></div>
+                <a href="#" class="card">
+                    <div class="properties" hidden>
+                        <div class="title">Programing & Data Structures</div>
+                        <div class="image-link">/assets/images/MicroBachelors.png</div>
+                        <div class="platform">EDX</div>
+                        <div class="platform-link">https://edx.org</div>
+                        <div class="degree-id">95d403a687db40beaefccf8a0b771320</div>
+                        <div class="degree-id-link">https://credentials.edx.org/credentials/95d403a687db40beaefccf8a0b771320</div>
+                        <div class="issue-date">January 2022</div>
+                    </div>
+
+                    <div class="blur"></div>
+                    <div class="image"><img src=""></div>
+                    <div class="name"></div>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="section">
+            <div class="title">Profesional Certificates</div>
+            
+            <div class="grid">
+                <a href="#" class="card">
+                    <div class="properties" hidden>
+                        <div class="title">Introduction to Object-Oriented Programming with Java</div>
+                        <div class="image-link">/assets/images/java_oop.png</div>
+                        <div class="platform">EDX</div>
+                        <div class="platform-link">https://edx.org</div>
+                        <div class="degree-id">3d08afe91a964bb6af20ab2a0b0dbe2f</div>
+                        <div class="degree-id-link">https://credentials.edx.org/credentials/3d08afe91a964bb6af20ab2a0b0dbe2f</div>
+                        <div class="issue-date">February 2022</div>
+                    </div>
+
+                    <div class="blur"></div>
+                    <div class="image"><img src=""></div>
+                    <div class="name"></div>
+                </a>
+                <div class="card"></div>
+                <a href="#" class="card">
+                    <div class="properties" hidden>
+                        <div class="title">Programming & Data Structures</div>
+                        <div class="image-link">/assets/images/programing_and_data_structures.png</div>
+                        <div class="platform">EDX</div>
+                        <div class="platform-link">https://edx.org</div>
+                        <div class="degree-id">95d403a687db40beaefccf8a0b771320</div>
+                        <div class="degree-id-link">https://credentials.edx.org/credentials/95d403a687db40beaefccf8a0b771320</div>
+                        <div class="issue-date">January 2022</div>
+                    </div>
+
+                    <div class="blur"></div>
+                    <div class="image"><img src=""></div>
+                    <div class="name"></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="title">Degrees</div>
+            
+            
         </div>
 
     </div>
 
-    <script src="/assets/js/scripts.js"></script>
+    <script src="/assets/js/popup.js"></script>
+    <script src="/assets/js/degrees.js"></script>
 
 </body>
 
