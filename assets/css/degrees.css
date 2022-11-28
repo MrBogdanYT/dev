@@ -1,0 +1,62 @@
+
+:root {
+    --crad-width: 390px;
+    --card-height: 200px;
+}
+
+.section .grid .title{
+    font-size: 80px;
+    font-weight: 500;
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section .grid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, var(--crad-width));
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.section .card{
+    width: var(--crad-width);
+    height: var(--card-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section .card .image{
+    width: var(--crad-width);
+    height: var(--card-height);
+    border-radius: 25px;
+    display: flex;
+    position: absolute;
+}
+
+.section .card .image img{
+    width: var(--crad-width);
+    height: var(--card-height);
+    border-radius: 25px;
+}
+
+.blur {
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    z-index: 5;
+    width: var(--crad-width);
+    height: 200px;
+    border-radius: 25px;
+}
+
+.section .card .name{
+    background-color: transparent;
+    border-radius: 25px;
+    font-size: 40px;
+    border-radius: 25px;
+    z-index: 10;
+    text-align: center;
+}
+
