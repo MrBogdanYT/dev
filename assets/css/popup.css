@@ -22,6 +22,11 @@
     padding-bottom: 50px;
 }
 
+.popup .content-view .degree img{
+    background-color: inherit;
+}
+
+
 .popup .content-view .title{
     background-color: inherit;
     padding-bottom: 50px;

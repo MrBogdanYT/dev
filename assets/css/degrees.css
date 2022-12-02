@@ -37,6 +37,15 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    cursor: pointer;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.no-pointer{
+    cursor: default !important;
 }
 
 .section .card .image{
@@ -74,4 +83,3 @@
 .section {
     padding-bottom: 200px;
 }
-
