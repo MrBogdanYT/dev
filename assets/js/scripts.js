@@ -75,3 +75,11 @@ function registerExperienceHover(amount) {
         });
     }
 }
+
+function openNav() {
+    document.getElementsByClassName("side-nav")[0].style.visibility = "visible";
+}
+
+function closeNav() {
+    document.getElementsByClassName("side-nav")[0].style.visibility = "hidden";
+}
