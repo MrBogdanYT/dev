@@ -78,8 +78,12 @@ function registerExperienceHover(amount) {
 
 function openNav() {
     document.getElementsByClassName("side-nav")[0].style.visibility = "visible";
+    document.getElementsByClassName("side-nav")[0].classList.add("animate__fadeInRight");
+    document.getElementsByClassName("side-nav")[0].classList.remove("animate__fadeOutRight");
 }
 
 function closeNav() {
-    document.getElementsByClassName("side-nav")[0].style.visibility = "hidden";
+    //document.getElementsByClassName("side-nav")[0].style.visibility = "hidden";
+    document.getElementsByClassName("side-nav")[0].classList.remove("animate__fadeInRight");
+    document.getElementsByClassName("side-nav")[0].classList.add("animate__fadeOutRight");
 }

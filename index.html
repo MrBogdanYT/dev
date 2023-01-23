@@ -22,7 +22,8 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/6.4.95/css/materialdesignicons.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Source+Code+Pro&display=swap"
@@ -39,22 +40,22 @@
 
     <img src="/assets/images/logo.png" class="logo" />
 
-    <div class="side-nav">
+    <div class="side-nav animate__animated animate__fadeOutRight">
         <div class="close" onclick="closeNav()">x</div> 
         <ul>
-            <li class="one"><a href="/">
+            <li class="one"><a class="link" href="/">
                 <span class="mdi mdi-home"></span>
                 Home
             </a></li>
-            <li class="two"><a href="/degrees.html">
+            <li class="two"><a class="link" href="/degrees.html">
                 <span class="mdi mdi-school"></span>
                 Degrees
             </a></li>
-            <li class="three"><a href="#">
+            <li class="three"><a class="link" href="#">
                 <span class="mdi mdi-folder"></span>
                 Projects
             </a></li>
-            <li class="four"><a href="#">
+            <li class="four"><a class="link" href="#">
                 <span class="mdi mdi-file"></span>
                 Resume
             </a></li>
@@ -72,7 +73,7 @@
             </ul>
         </div>
         <div class="top-menu">
-            <span class="mdi mdi-menu" onclick=""></span>
+            <span class="top-bar-menu mdi mdi-menu" onclick="openNav()"></span>
         </div>
     </div>
 
@@ -141,21 +142,24 @@
             </div>
             <br><br>
             <div class="content">
-                <hr class="experience-bar" />
-                <hr class="experience-bar-handle" />
-                <div class="tablist">
-                    <ul>
-                        <li class="1 experience-select-active-parent"><span
-                                class="experience-select-1 experience-select-active">play.original.gg</span></li>
-                        <li class="2"><span class="experience-select-2">play.pokeninjas.com</span></li>
-                        <li class="3"><span class="experience-select-3">play.gamingworld.ro</span></li>
-                        <li class="4"><span class="experience-select-4">mc.gamster.org</span></li>
-                        <li class="5"><span class="experience-select-5">chunkmc.net</span></li>
-                        <li class="6"><span class="experience-select-6">play.citruspvp.com</span></li>
-                        <li class="7"><span class="experience-select-7">Personal Projects</span></li>
-                        <li class="8"><span class="experience-select-8">Pulic Libs</span></li>
-                    </ul>
+                <div class="content-tab">
+                    <hr class="experience-bar" />
+                    <hr class="experience-bar-handle" />
+                    <div class="tablist">
+                        <ul>
+                            <li class="1 experience-select-active-parent"><span
+                                    class="experience-select-1 experience-select-active">play.original.gg</span></li>
+                            <li class="2"><span class="experience-select-2">play.pokeninjas.com</span></li>
+                            <li class="3"><span class="experience-select-3">play.gamingworld.ro</span></li>
+                            <li class="4"><span class="experience-select-4">mc.gamster.org</span></li>
+                            <li class="5"><span class="experience-select-5">chunkmc.net</span></li>
+                            <li class="6"><span class="experience-select-6">play.citruspvp.com</span></li>
+                            <li class="7"><span class="experience-select-7">Personal Projects</span></li>
+                            <li class="8"><span class="experience-select-8">Pulic Libs</span></li>
+                        </ul>
+                    </div>
                 </div>
+
                 <div class="entry experience-1 experience-active">
                     <div class="title">
                         <div class="position">Head Developer & Administrator</div>

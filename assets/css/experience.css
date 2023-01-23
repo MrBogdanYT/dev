@@ -39,6 +39,10 @@
     position: relative;
 }
 
+.experience .content .content-tab{
+    display: flex;
+}
+
 .experience .content {
     display: flex;
 }
@@ -173,4 +177,24 @@
 .experience .projects .project-inner .header .big {
     font-size: 40px;
     color: var(--clickable-color);
+}
+
+@media screen and (max-width: 800px) {
+    .experience .content{
+        display: block;
+    }
+
+    .experience .content .content-tab{
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .title {
+        display: block;
+    }
+    
+    .title .hline {
+        display: none;
+    }
 }
