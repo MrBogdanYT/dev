@@ -1,7 +1,8 @@
 
 :root {
-    --crad-width: 390px;
+    --card-width: 390px;
     --card-height: 200px;
+    --card-border-radius: 25px
 }
 
 .section .title{
@@ -27,10 +28,12 @@
     display: grid;
     width: 100%;
     gap: 20px;
+    align-items: center;
+    justify-items: center;
 }
 
 .section .card{
-    width: var(--crad-width);
+    width: var(--card-width);
     height: var(--card-height);
     display: flex;
     align-items: center;
@@ -47,25 +50,21 @@
     cursor: default !important;
 }
 
-.section .card .image{
-    width: var(--crad-width);
+.section .card img{
+    width: var(--card-width);
     height: var(--card-height);
     border-radius: 25px;
     display: flex;
     position: absolute;
-}
-
-.section .card .image img{
-    width: var(--crad-width);
-    height: var(--card-height);
-    border-radius: 25px;
+    border-radius: var(--card-border-radius);
+    filter: blur(1px) brightness(0.15);
 }
 
 .blur {
     background-color: rgba(0,0,0,0.7);
     position: absolute;
     z-index: 5;
-    width: var(--crad-width);
+    width: var(--card-width);
     height: 200px;
     border-radius: 25px;
 }
