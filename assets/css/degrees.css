@@ -60,14 +60,6 @@
     transform: scale(1.2);
 }
 
-.section-content {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 4px;
-    align-items: center;
-    justify-items: center;
-}
-
 .card {
     padding: 10px;
 }
