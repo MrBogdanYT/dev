@@ -8,16 +8,15 @@ for (let index = 0; index < cards.length; index++) {
     }
 
     card.innerHTML = card.innerHTML + `
-        <div class="blur"></div>
-        <div class="image"><img src=""></div>
-        <div class="name"></div>
+        <span class="name">
+            <div class="name-container">
+                <div class="name-string">
+                    ${properties.title}
+                </div>
+            </div>
+        </span>
+        <img src="${properties.image}">
     `;
-
-    let imageObj = card.getElementsByClassName("image")[0];
-    let nameObj = card.getElementsByClassName("name")[0];
-
-    nameObj.innerHTML = properties.title;
-    imageObj.getElementsByTagName("img")[0].src = properties.image;
 
     card.onclick = function() {
         openPopup((popup) => handleDegreePopup(popup, card));
