@@ -23,6 +23,48 @@ for (let index = 0; index < cards.length; index++) {
     }
 }
 
+loop();
+
+function loop(){
+    setTimeout(() => {
+        whileLoop()
+        loop();
+    }, 100);
+}
+
+function whileLoop(){
+    width = getWidth()
+    numberOfColumns = parseInt(width/(390 + 40 + 40))
+
+    numberOfColumns = Math.min(numberOfColumns, 3)
+
+    let grids = document.getElementsByClassName("grid");
+
+    for (let index = 0; index < grids.length; index++) {
+        const grid = grids[index];
+        let localNumberOfColumns = numberOfColumns;
+        if(grid.children.length <=3 ){
+            localNumberOfColumns = Math.min(grid.children.length, localNumberOfColumns)
+        }
+        console.log(grid.children.length)
+
+        grid.style=`grid-template-columns: repeat(${localNumberOfColumns}, var(--crad-width));`
+    }
+
+    console.log(numberOfColumns)
+}
+
+function getWidth() {
+    return Math.max(
+      document.body.scrollWidth,
+      document.documentElement.scrollWidth,
+      document.body.offsetWidth,
+      document.documentElement.offsetWidth,
+      document.documentElement.clientWidth
+    );
+  }
+  
+
 function handleDegreePopup(popup, card){
     let properties = getProperties(card);
 
