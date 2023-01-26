@@ -26,7 +26,6 @@
     justify-content: center;
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fill, var(--crad-width));
     gap: 20px;
 }
 
