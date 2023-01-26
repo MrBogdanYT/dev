@@ -37,9 +37,7 @@ function whileLoop(){
     width = getWidth()
     numberOfColumns = parseInt(width/(390 + 40 + 40))
 
-    if(numberOfColumns>=3){
-        numberOfColumns=3
-    }
+    numberOfColumns = Math.min(numberOfColumns, 3)
 
     let grids = document.getElementsByClassName("grid");
 
