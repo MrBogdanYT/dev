@@ -9,11 +9,7 @@ for (let index = 0; index < cards.length; index++) {
 
     card.innerHTML = card.innerHTML + `
         <span class="name">
-            <!--<div class="name-container">-->
-                <!--<div class="name-string">-->
-                    ${properties.title}
-                <!--</div>-->
-            <!--</div>-->
+            ${properties.title}
         </span>
         <img src="${properties.image}">
     `;
@@ -47,7 +43,6 @@ function whileLoop(){
             localNumberOfColumns = Math.min(grid.children.length, localNumberOfColumns)
         }
 
-        console.log(localNumberOfColumns)
         grid.style=`grid-template-columns: repeat(${localNumberOfColumns}, var(--card-width));`
     }
 }

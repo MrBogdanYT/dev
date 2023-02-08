@@ -37,28 +37,54 @@
 
     <img src="/assets/images/logo.png" class="logo" />
 
+    <div class="side-nav animate__animated animate__fadeOutRight">
+        <div class="close" onclick="closeNav()">x</div> 
+        <ul>
+            <li class="one"><a class="link" href="/">
+                <span class="mdi mdi-home"></span>
+                Home
+            </a></li>
+            <li class="two"><a class="link" href="/degrees.html">
+                <span class="mdi mdi-school"></span>
+                Degrees
+            </a></li>
+            <li class="three"><a class="link" href="/projects.html">
+                <span class="mdi mdi-folder"></span>
+                Projects
+            </a></li>
+            <li class="four"><a class="link" href="#">
+                <span class="mdi mdi-file"></span>
+                Resume
+            </a></li>
+        </ul>
+    </div>
+
     <div class="container">
         <div class="top-bar">
             <ul>
                 <li class="one"><a href="/">Home</a></li>
                 <li class="two"><a href="/degrees.html">Degrees</a></li>
-                <li class="three"><a href="#">Projects</a></li>
+                <li class="three"><a href="/projects.html">Projects</a></li>
                 <li class="four"><a href="#">Resume</a></li>
                 <hr style="margin-left: 25%" />
             </ul>
         </div>
+        <div class="top-menu">
+            <span class="top-bar-menu mdi mdi-menu" onclick="openNav()"></span>
+        </div>
     </div>
 
+
     <div class="sidebar-left">
-        <a href="#" class="social"><span class="mdi mdi-github"></span></a>
-        <a href="#" class="social"><span class="mdi mdi-linkedin"></span></a>
-        <a href="#" class="social"><span class="mdi mdi-twitter"></span></a>
-        <a href="#" class="social"><span class="mdi mdi-instagram"></span></a>
+        <a href="https://github.com/L1ghtDream/" class="social"><span class="mdi mdi-github"></span></a>
+        <a href="linkedin.com/in/voinearadu/" class="social"><span class="mdi mdi-linkedin"></span></a>
+        <a href="https://twitter.com/_L1ghtDream" class="social"><span class="mdi mdi-twitter"></span></a>
+        <a href="https://www.instagram.com/voinea.radu.38/" class="social"><span class="mdi mdi-instagram"></span></a>
         <vline />
     </div>
 
     <div class="sidebar-right" orientation="right">
-        <a href="#" class="email">contact@voinearadu.com</a>
+        <a href="#" class="email" onclick="copyEmail()">contact@voinearadu.com</a>
         <vline />
     </div>
 
@@ -325,6 +351,7 @@
 
     </div>
 
+    <script src="/assets/js/scripts.js" defer></script>
     <script src="/assets/js/popup.js"></script>
     <script src="/assets/js/degrees.js"></script>
 
