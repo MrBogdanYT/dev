@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/topbar.css">
+    <link rel="stylesheet" href="/assets/css/projects.css">
+    <link rel="stylesheet" href="/assets/css/popup-project.css">
+
+    <link rel="stylesheet" href="/assets/font/calibre/style.css">
+    <link rel="stylesheet" href="/assets/font/sf-mono/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/6.4.95/css/materialdesignicons.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Source+Code+Pro&display=swap"
+        rel="stylesheet">
+
+    <title>Voinea Radu</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <img src="/assets/images/logo.png" class="logo" />
+
+    <div class="side-nav animate__animated animate__fadeOutRight">
+        <div class="close" onclick="closeNav()">x</div> 
+        <ul>
+            <li class="one"><a class="link" href="/">
+                <span class="mdi mdi-home"></span>
+                Home
+            </a></li>
+            <li class="two"><a class="link" href="/degrees.html">
+                <span class="mdi mdi-school"></span>
+                Degrees
+            </a></li>
+            <li class="three"><a class="link" href="/projects.html">
+                <span class="mdi mdi-folder"></span>
+                Projects
+            </a></li>
+            <li class="four"><a class="link" href="#">
+                <span class="mdi mdi-file"></span>
+                Resume
+            </a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="top-bar">
+            <ul>
+                <li class="one"><a href="/">Home</a></li>
+                <li class="two"><a href="/degrees.html">Degrees</a></li>
+                <li class="three"><a href="/projects.html">Projects</a></li>
+                <li class="four"><a href="#">Resume</a></li>
+                <hr style="margin-left: 50%" />
+            </ul>
+        </div>
+        <div class="top-menu">
+            <span class="top-bar-menu mdi mdi-menu" onclick="openNav()"></span>
+        </div>
+    </div>
+
+
+    <div class="sidebar-left">
+        <a href="https://github.com/L1ghtDream/" class="social"><span class="mdi mdi-github"></span></a>
+        <a href="linkedin.com/in/voinearadu/" class="social"><span class="mdi mdi-linkedin"></span></a>
+        <a href="https://twitter.com/_L1ghtDream" class="social"><span class="mdi mdi-twitter"></span></a>
+        <a href="https://www.instagram.com/voinea.radu.38/" class="social"><span class="mdi mdi-instagram"></span></a>
+        <vline />
+    </div>
+
+    <div class="sidebar-right" orientation="right">
+        <a href="#" class="email" onclick="copyEmail()">contact@voinearadu.com</a>
+        <vline />
+    </div>
+
+    <div class="popup" id="popup-template" hidden>
+        <div class="content-view">
+            <div class="close" onclick="closePopup()">x</div> 
+            <div class="container">
+                <div class="title"></div>
+                <div class="degree"><img src="/assets/images/MicroBachelors.png"></div>
+                <div class="details">
+                    <p>Platform: <a target="_blank" href="#" class="link"></a></p>
+                    <p>Degree ID: <a target="_blank" href="#" class="link"></a></p>
+                    <p>Issue Date:</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-view">
+
+
+        <div class="section">
+            <div class="title">GameServers</div>
+            
+            <div class="grid">
+                <div class="card">
+                    <div class="properties" hidden>
+                        <div class="title">play.pokeninjas.com</div>
+                        <div class="image-link">/assets/images/pokeninjas.png</div>
+                        <div class="platform">sd</div>
+                        <div class="platform-link">https://edx.org</div>
+                        <div class="degree-id">95d403a687db40beaefccf8a0b771320</div>
+                        <div class="degree-id-link">https://credentials.edx.org/credentials/95d403a687db40beaefccf8a0b771320</div>
+                        <div class="issue-date">January 2022</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="title">Games</div>
+            
+            <div class="grid">
+                <div class="card">
+                    <div class="properties" hidden>
+                        <div class="title">Programing & Data Structures</div>
+                        <div class="image-link">/assets/images/MicroBachelors.png</div>
+                        <div class="platform">EDX</div>
+                        <div class="platform-link">https://edx.org</div>
+                        <div class="degree-id">95d403a687db40beaefccf8a0b771320</div>
+                        <div class="degree-id-link">https://credentials.edx.org/credentials/95d403a687db40beaefccf8a0b771320</div>
+                        <div class="issue-date">January 2022</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    
+    <script src="/assets/js/scripts.js" defer></script>
+    <script src="/assets/js/popup.js"></script>
+    <script src="/assets/js/projects.js"></script>
+
+</body>
+
+</html>
