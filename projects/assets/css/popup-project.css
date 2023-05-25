@@ -13,7 +13,7 @@
     border-radius: 10px;
     background-color: var(--popup-color);
     position: absolute;
-    margin-left: 23vw;
+    /*margin-left: 23vw;*/
     margin-top: 8vh;
 }
 
@@ -79,6 +79,15 @@
     right: 20px;
     top: 20px;
 }
+
+.popup .server {
+    background-color: var(--popup-color);
+}
+
+.popup .server img {
+    background-color: var(--popup-color);
+}
+
 
 .elementToFadeIn {
     animation: fadeInAnimation 0.2s linear forwards;

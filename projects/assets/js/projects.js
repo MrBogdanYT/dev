@@ -29,8 +29,8 @@ function loop(){
 }
 
 function whileLoop(){
-    width = getWidth()
-    numberOfColumns = parseInt(width/(390 + 40 + 40))
+    let width = getWidth()
+    let numberOfColumns = parseInt(width/(390 + 40 + 40))
 
     numberOfColumns = Math.min(numberOfColumns, 3)
 
@@ -45,6 +45,26 @@ function whileLoop(){
 
         grid.style=`grid-template-columns: repeat(${localNumberOfColumns}, var(--card-width));`
     }
+
+    popups = document.getElementsByClassName("popup");
+
+    for (let index = 0; index < popups.length; index++) {
+        let popup = popups[index];
+        let popupContent = popup.getElementsByClassName("content-view")[0];
+
+        let popupWitdh = 1100;
+        let remaningWidth = width - popupWitdh;
+    
+        newStyle = `
+            width: ${popupWitdh}px;
+            margin-left: ${remaningWidth/2}px;
+        `;
+    
+        console.log(`${remaningWidth}px`)
+    
+        popupContent.style=newStyle;
+    }
+
 }
 
 function getWidth() {
@@ -68,46 +88,44 @@ function handleDegreePopup(popup, card){
     // Title
     popup.getElementsByClassName("title")[0].innerHTML = properties.title;
     
-    // Degree Image
-    popup.getElementsByClassName("degree")[0].getElementsByTagName("img")[0].src = properties.image;
+    // Server Image
+    popup.getElementsByClassName("server")[0].getElementsByTagName("img")[0].src = properties.image;
 
-    // Platform
-    popup.getElementsByClassName("details")[0].getElementsByTagName("a")[0].innerHTML = properties.platform;
-    popup.getElementsByClassName("details")[0].getElementsByTagName("a")[0].href = properties.platform_link;
+    // Server Website
+    popup.getElementsByClassName("details")[0].getElementsByTagName("a")[0].innerHTML = properties.website;
+    popup.getElementsByClassName("details")[0].getElementsByTagName("a")[0].href = properties.website_link;
 
-    // Degree ID
-    popup.getElementsByClassName("details")[0].getElementsByTagName("a")[1].innerHTML = properties.degree_id;
-    popup.getElementsByClassName("details")[0].getElementsByTagName("a")[1].href = properties.degree_id_link;
+    // Working period
+    popup.getElementsByClassName("details")[0].getElementsByTagName("p")[1].getElementsByTagName("p")[0] = properties.working_period;
 
-    // Issue Date
-    popup.getElementsByClassName("details")[0].getElementsByTagName("p")[2].innerHTML = "Issue Date: " + properties.issue_date;
+    // Projects:
+    popup.getElementsByClassName("details")[0].getElementsByTagName("p")[2].getElementsByTagName("p")[0] = "";
  
-    // Missing data cases
-    if(properties.platform_link == ""){
-        popup.getElementsByClassName("details")[0].getElementsByTagName("a")[0].style += ";pointer-events: none;";
-    }
-    if(properties.degree_id == ""){
-        popup.getElementsByClassName("details")[0].getElementsByTagName("p")[1].remove()
-    }else if(properties.degree_id_link == ""){
-        popup.getElementsByClassName("details")[0].getElementsByTagName("a")[1].style += ";pointer-events: none;"
-    }
+    let serverImage = popup.getElementsByClassName("server")[0].getElementsByTagName("img")[0];
 
-    let degreeImage = popup.getElementsByClassName("degree")[0].getElementsByTagName("img")[0];
-
-    if(degreeImage == undefined){
+    if(serverImage == undefined){
         return;
     }
 
-    degreeImage.style = "height: 100%; width: auto;";
+    serverImage.style = "height: 100%; width: auto;";
 
     setTimeout(() => {
-        let _16_9_width = degreeImage.height * 16/9;
-        let current_width = degreeImage.width;
+        let _16_9_width = serverImage.height * 16/9;
+        let current_width = serverImage.width;
 
-        degreeImage.style = `
-            height: 300px;
-            width: 300px;
-        `.replaceAll("%padding%", (_16_9_width - current_width));
+        height = "100%";
+
+        if(serverImage.height > window.screen.availHeight){
+            console.log("here")
+            height=window.screen.availHeight*0.35+"px";
+        }
+
+        serverImage.style = `
+            height: %height%;
+            width: auto;
+            padding: 0px %padding%px 0px %padding%px;
+        `.replaceAll("%padding%", (_16_9_width - current_width)/2)
+        .replaceAll("%height%", height);
     }, 1);
 }
 
