@@ -116,7 +116,6 @@ function handleDegreePopup(popup, card){
         height = "100%";
 
         if(serverImage.height > window.screen.availHeight){
-            console.log("here")
             height=window.screen.availHeight*0.35+"px";
         }
 

@@ -45,6 +45,25 @@ function whileLoop(){
 
         grid.style=`grid-template-columns: repeat(${localNumberOfColumns}, var(--card-width));`
     }
+
+    popups = document.getElementsByClassName("popup");
+
+    for (let index = 0; index < popups.length; index++) {
+        let popup = popups[index];
+        let popupContent = popup.getElementsByClassName("content-view")[0];
+
+        let popupWitdh = 1100;
+        let remaningWidth = width - popupWitdh;
+    
+        newStyle = `
+            width: ${popupWitdh}px;
+            margin-left: ${remaningWidth/2}px;
+        `;
+    
+        console.log(`${remaningWidth}px`)
+    
+        popupContent.style=newStyle;
+    }
 }
 
 function getWidth() {
@@ -101,14 +120,21 @@ function handleDegreePopup(popup, card){
     degreeImage.style = "height: 100%; width: auto;";
 
     setTimeout(() => {
-        let _16_9_width = degreeImage.height * 16/9;
-        let current_width = degreeImage.width;
+        let _16_9_width = serverImage.height * 16/9;
+        let current_width = serverImage.width;
 
-        degreeImage.style = `
-            height: 100%;
+        height = "100%";
+
+        if(serverImage.height > window.screen.availHeight){
+            height=window.screen.availHeight*0.35+"px";
+        }
+
+        serverImage.style = `
+            height: %height%;
             width: auto;
             padding: 0px %padding%px 0px %padding%px;
-        `.replaceAll("%padding%", (_16_9_width - current_width)/2);
+        `.replaceAll("%padding%", (_16_9_width - current_width)/2)
+        .replaceAll("%height%", height);
     }, 1);
 }
 
