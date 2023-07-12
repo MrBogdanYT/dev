@@ -20,12 +20,9 @@
 .popup .content-view .degree{
     background-color: inherit;
     padding-bottom: 50px;
+    align-self: center;
+    text-align: center;
 }
-
-.popup .content-view .degree img{
-    background-color: inherit;
-}
-
 
 .popup .content-view .title{
     background-color: inherit;
@@ -48,6 +45,7 @@
 }
 
 .popup .content-view .degree img{
+    background-color: inherit;
     width: 50vw;
     max-height: 500px;
     height: auto;
