@@ -12,21 +12,17 @@
 }
 
 .top-bar .two:hover~hr {
-    margin-left: 25% !important;
+    margin-left: 33% !important;
 }
 
 .top-bar .three:hover~hr {
-    margin-left: 50% !important;
-}
-
-.top-bar .four:hover~hr {
-    margin-left: 75% !important;
+    margin-left: 66% !important;
 }
 
 .top-bar hr {
     background: var(--clickable-color);
     height: 3px;
-    width: 25%;
+    width: 33%;
     margin: 0;
     border: none;
     transition: .3s ease-in-out;
